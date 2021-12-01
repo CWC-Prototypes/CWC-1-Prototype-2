@@ -18,11 +18,14 @@ public class DestroyOutOfBounds : MonoBehaviour
     {
         if (transform.position.z > topBound)
         {
+            // Projectiles.
             Destroy(gameObject);
         }
         else if (transform.position.z < lowerBound)
         {
+            // Animals.
             Destroy(gameObject);
+            Debug.Log("Game Over");
         }
     }
 }
